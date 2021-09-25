@@ -5,6 +5,7 @@ Path finding alogrithems visualizer inspired from Clément Mihailescu
 * [General Info](#general-information)
 * [Technologies Used](#technologies-used)
 * [Features](#features)
+* [Status](#status)
 * [Screenshots](#screenshots)
 * [Room for Improvement](#room-for-improvement)
 * [Acknowledgements](#acknowledgements)
@@ -16,10 +17,12 @@ Path finding alogrithems visualizer inspired from Clément Mihailescu
 
 
 ## Technologies Used
-- react -create-my-app
+- react -create-react-app
 
 ## Features
 
+## Status
+- On hold
 
 ## Screenshots
 !

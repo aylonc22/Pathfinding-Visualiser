@@ -1,0 +1,141 @@
+.App {
+  height: 100vh;
+  width: 100%;  
+  text-align: center;
+  overflow:hidden;
+}
+
+.board{
+  display: flex;
+  flex-flow: column nowrap;
+  width: 98%;
+  height: 80%;
+  margin: auto;
+  border: solid;
+ 
+ 
+}
+
+.row{
+  display: flex;
+  flex-flow: row nowrap;
+  border-top: 0.5px solid;
+  flex-basis: 100px;
+}
+
+.row:last-child{
+  border-bottom: 0.5px solid;
+}
+
+.cell{ 
+  flex-basis: 100px;
+   border-left: 0.5px solid; 
+}
+
+.cellEmpty:hover{
+  background-image: --hover;
+}
+.cell:last-child{
+  border-right: 0.5px solid; 
+}
+
+.cell.start{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  width: inherit;
+  height: inherit; 
+}
+
+.cell.target{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: inherit;
+  height: inherit;
+}
+
+.cell.bomb{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
+
+.cell.weight{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cell.visited{
+  animation-name: visitedAnimation;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+.cell.shortest{
+  background-color: #ffff62;
+  border-color: #ffffc8;
+}
+
+.cell.wall{
+  background-color: #102e3b; 
+  animation-name: wallAnimation;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+.iconHover{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes visitedAnimation {
+  0% {
+    transform: scale(.3);
+    background-color: rgba(0, 0, 66, 0.75);
+    border-radius: 100%;
+  }
+
+  50% {
+    background-color: rgba(17, 104, 217, 0.75);
+  }
+
+  75% {
+    transform: scale(1.2);
+    background-color: rgba(0, 217, 159, 0.75)
+  }
+
+  100% {
+    transform: scale(1.0);
+    background-color: rgba(0, 190, 218, 0.75);
+  }
+}
+
+@keyframes wallAnimation {
+  0% {
+    transform: scale(.3);
+    background-color: rgb(12, 53, 71);
+  }
+
+  50% {
+    transform: scale(1.2);
+    background-color: rgb(12, 53, 71);
+  }
+
+  100% {
+    transform: scale(1.0);
+    background-color: rgb(12, 53, 71);
+  }
+}
